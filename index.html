@@ -39,19 +39,19 @@
     </div>
 
     <!-- Product Detail Modal -->
-    <div id="productModal" class="hidden fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 overflow-y-auto">
-        <div class="bg-white rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl relative my-8">
-            <button onclick="closeProductModal()" class="absolute top-4 right-4 bg-gray-100 text-gray-700 w-10 h-10 rounded-full flex items-center justify-center font-bold hover:bg-gray-200 transition z-10">✕</button>
+    <div id="productModal" class="hidden fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl relative my-auto max-h-[90vh] flex flex-col md:block overflow-y-auto">
+            <button onclick="closeProductModal()" class="absolute top-3 right-3 bg-gray-100/80 backdrop-blur-md text-gray-700 w-9 h-9 rounded-full flex items-center justify-center font-bold hover:bg-gray-200 transition z-10">✕</button>
             <div class="grid grid-cols-1 md:grid-cols-2">
                 <!-- Image Gallery -->
-                <div class="bg-gray-100 p-6 flex flex-col justify-center items-center">
-                    <div class="w-full h-80 rounded-2xl overflow-hidden shadow-inner bg-white mb-4 flex items-center justify-center p-2">
-                        <img id="modalMainImage" src="" alt="Product view" class="w-full h-full object-contain">
+                <div class="bg-gray-100 p-4 sm:p-6 flex flex-col justify-center items-center">
+                    <div class="w-full h-64 sm:h-80 rounded-2xl overflow-hidden shadow-inner bg-white mb-3 sm:mb-4 flex items-center justify-center p-2">
+                        <img id="modalMainImage" src="" alt="Product view" class="max-w-full max-h-full object-contain">
                     </div>
                     <div id="modalThumbnails" class="flex space-x-2 overflow-x-auto w-full pb-2"></div>
                 </div>
                 <!-- Product Details -->
-                <div class="p-8 flex flex-col justify-between">
+                <div class="p-5 sm:p-8 flex flex-col justify-between">
                     <div>
                         <span id="modalCategory" class="text-xs uppercase tracking-wider font-semibold text-gray-400 bg-gray-100 px-3 py-1 rounded-full">Category</span>
                         <h2 id="modalTitle" class="text-2xl font-bold text-gray-900 mt-2">Product Title</h2>
